@@ -3,26 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Form</title>
+    <title>Remote Work Survey</title>
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
     />
+    <style>
+      .question-box {
+        background: #f8f9fa;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .radio-option {
+        padding: 8px 10px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+      .radio-option:hover {
+        background-color: #e9ecef;
+      }
+    </style>
   </head>
   <body class="container mt-5">
-    <h2 class="mb-4">The Impact of Remote Work on Productivity</h2>
-
-    <form action="survey.php" method="POST">
-      <div class="mb-3">
-        <label class="form-label"
-          >1. Do you feel more productive while working remotely?</label
-        ><br />
-        <input type="radio" name="q1" value="Yes" required /> Yes
-        <input type="radio" name="q1" value="No" /> No
-        <input type="radio" name="q1" value="Sometimes" /> Sometimes
+    <h2 class="mb-4 text-center">
+      (Survey: Impact of Remote Work on Productivity)
+    </h2>
+    <form id="surveyForm">
+      <div id="questionContainer"></div>
+      <div class="d-grid mt-3">
+        <button type="submit" class="btn btn-primary d-none" id="submitBtn">
+          Submit
+        </button>
       </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <div id="responseMessage" class="mt-3"></div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

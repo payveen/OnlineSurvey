@@ -37,6 +37,12 @@ body {
   letter-spacing: 4px;
   transform: scale(1.01);
 }
+
+.card{
+  opacity: 0.85 !important;
+}
+
+
 @keyframes float {
   0% {
     transform: translateY(0);
